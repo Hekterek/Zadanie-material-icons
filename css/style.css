@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+ul li::before {
+  position: relative;
+  top: 9px;
+  right: 4px;
+  font-family: "Material Icons";
+  font-size: 2.6rem;
+  color: green;
+  content: "\e876 ";
+}
+
+ul li:nth-of-type(4)::before {
+  position: relative;
+  top: 9px;
+  right: 4px;
+  font-family: "Material Icons";
+  font-size: 2.6rem;
+  color: red;
+  content: "\e5cd";
+}
+
+@media screen and (min-width: 701px) {
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    margin-right: 15px;
+  }
+}
